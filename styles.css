@@ -488,3 +488,34 @@ footer {
   .client-logos { gap: 40px; }
   .client-logos svg { height: 30px; }
 }
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #ffc107;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #1a0b3d;
+    padding: 20px;
+  }
+  nav ul.active { display: flex; }
+  header { flex-direction: row; }
+}
