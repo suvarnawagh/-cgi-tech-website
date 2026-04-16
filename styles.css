@@ -682,7 +682,40 @@ footer {
 .marquee-text span {
   padding-right: 150px; /* प्रत्येक सेट मधला गॅप */
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f59e0b;
+}
 
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  animation: logo-float 3s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+  0%, 100% { 
+    transform: translateY(0px);
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.6);
+  }
+  50% { 
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 1);
+  }
+}
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
