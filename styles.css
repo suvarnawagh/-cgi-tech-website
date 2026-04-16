@@ -253,11 +253,13 @@ nav a.active {
 
 .about-image img {
   width: 100%;
-  border-radius: 15px;
-  animation: imgLoad 0.5s ease-in;
-  background-color: #2d1656; /* Image लोड होईपर्यंत हा कलर दिसेल */
-  object-fit: cover;
+  height: 100%;
   min-height: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+  background-color: #2d1656;
+  display: block;
+}
 }
 }
 
