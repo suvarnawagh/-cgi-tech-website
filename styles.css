@@ -255,6 +255,10 @@ nav a.active {
   width: 100%;
   border-radius: 15px;
   animation: imgLoad 0.5s ease-in;
+  background-color: #2d1656; /* Image लोड होईपर्यंत हा कलर दिसेल */
+  object-fit: cover;
+  min-height: 400px;
+}
 }
 
 .about-content {
