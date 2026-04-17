@@ -2216,93 +2216,13 @@ footer {
    .client-logo-card img {
         max-height: 65px;
     }
-}
-/* FAQ Section - Site Color Match */
-.faq {
-    padding: 80px 5%;
-    background: linear-gradient(135deg, #0a4d68 0%, #088395 50%, #05bfdb 100%); /* फोटोतला टील ग्रेडियंट */
-}
-.faq .section-badge {
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.faq h2 {
-    color: #fff; /* हेडिंग पांढरं */
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 36px;
-}
-.faq .section-subtitle {
-    color: #e0f7fa; /* हलका सायन */
-    text-align: center;
-}
-.faq-container {
-    max-width: 800px;
-    margin: 40px auto 0;
-}
-.faq-item {
-    background: rgba(255, 255, 255, 0.1); /* ग्लास इफेक्ट */
-    backdrop-filter: blur(8px);
-    margin-bottom: 15px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    transition: all 0.3s;
-}
-.faq-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #fff;
-    transform: translateY(-2px);
-}
-.faq-question {
-    width: 100%;
-    padding: 20px 25px;
-    background: none;
-    border: none;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff; /* प्रश्न पांढरा */
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.faq-icon {
-    font-size: 24px;
-    transition: transform 0.3s;
-    color: #fff;
-    font-weight: 300;
-}
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background: rgba(0, 0, 0, 0.15); /* उत्तरासाठी डार्क शेड */
-}
-.faq-answer p {
-    padding: 0 25px 20px;
-    color: #e0f7fa; /* उत्तर हलका सायन */
-    line-height: 1.6;
-    margin: 0;
-}
-.faq-item.active .faq-answer {
-    max-height: 200px;
-}
-.faq-item.active .faq-icon {
-    transform: rotate(45deg);
-}
-}
-/* FAQ Black BG Killer - 100% Working */
-section.faq, 
-#faq, 
-section#faq {
-    background: linear-gradient(135deg, #0a4d68 0%, #088395 50%, #05bfdb 100%) !important;
-    background-color: transparent !important;
+/* FAQ - तुझ्या फोटोतला एक्झॅक्ट कलर */
+#faq {
+    background: linear-gradient(to bottom, #0d3b66 0%, #00b4d8 100%) !important;
+    padding: 80px 5% !important;
 }
 
-/* हेडिंग आणि बॅज पांढरे करण्यासाठी */
+/* हेडिंग आणि बॅज पांढरे */
 #faq .section-badge {
     background: rgba(255, 255, 255, 0.15) !important;
     color: #fff !important;
@@ -2315,6 +2235,7 @@ section#faq {
     color: #fff !important;
     display: block !important;
     text-align: center !important;
+    font-size: 36px !important;
 }
 
 #faq .section-subtitle {
@@ -2322,7 +2243,7 @@ section#faq {
     text-align: center !important;
 }
 
-/* FAQ बॉक्स ग्लास इफेक्ट */
+/* FAQ बॉक्स */
 #faq .faq-item {
     background: rgba(255, 255, 255, 0.1) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -2331,12 +2252,4 @@ section#faq {
 #faq .faq-question,
 #faq .faq-icon {
     color: #fff !important;
-}
-
-#faq .faq-answer {
-    background: rgba(0, 0, 0, 0.15) !important;
-}
-
-#faq .faq-answer p {
-    color: #e0f7fa !important;
 }
