@@ -477,24 +477,77 @@ img {
   margin-bottom: 50px;
 }
 
-.client-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin-top: 40px;
+/* NEW CLIENTS SECTION WITH LOGOS */
+.clients {
+    padding: 80px 5%;
+    background: #0a0a1f;
+    text-align: center;
 }
 
-.client-logos svg {
-  transition: 0.3s;
-  filter: grayscale(100%) opacity(60%);
+.clients h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-.client-logos svg:hover {
-  fill: #ffc107;
-  filter: grayscale(0%) opacity(100%);
-  transform: scale(1.1);
+.client-logos-pro {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    align-items: center;
+}
+
+.client-logo-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.client-logo-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffc107;
+    box-shadow: 0 15px 30px rgba(255, 193, 7, 0.2);
+}
+
+.client-logo-card img {
+    max-width: 100%;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Mobile Responsive */
+@media (max-width: 968px) {
+    .client-logos-pro {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .client-logo-card {
+        height: 90px;
+        padding: 15px;
+    }
+    
+    .client-logo-card img {
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .client-logos-pro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}1);
 }
 
 /* Blogs Section */
