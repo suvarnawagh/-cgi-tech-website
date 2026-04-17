@@ -1206,51 +1206,65 @@ a[href*="wa.me"],
 }
 </style>
     <style>
-/* 1. Footer चा निळा ग्रेडियंट जबरदस्तीने काढ आणि पर्पल कर */
-body footer,
-html body footer,
-footer[style] {
+/* Hero मधले सगळे बटण फिक्स कर */
+.hero a,
+.hero button,
+.hero .btn,
+.banner a,
+.banner button {
+    color: #ffffff!important; /* टेक्स्ट पांढरा */
+    background: transparent!important; /* बॅकग्राउंड ट्रान्सपरंट */
+    border: 2px solid #ffc107!important; /* पिवळी बॉर्डर */
+    padding: 12px 30px!important;
+    border-radius: 30px!important;
+    text-decoration: none!important;
+    display: inline-block!important;
+}
+
+/* बटणावर माउस नेला की पिवळा होईल */
+.hero a:hover,
+.hero button:hover,
+.hero .btn:hover {
+    background: #ffc107!important;
+    color: #1a0b3d!important; /* टेक्स्ट पर्पल */
+    border-color: #ffc107!important;
+}
+</style>
+    <style>
+/* 1. Footer चा निळा ग्रेडियंट 100% काढ */
+footer {
     background: #1a0b3d!important;
-    background-color: #1a0b3d!important;
     background-image: none!important;
 }
 
-/* 2. Footer मधल्या सगळ्या div ना पण पर्पल कर */
-footer div,
-footer.container,
-footer.row,
-footer.footer-widget {
-    background: transparent!important;
-    background-image: none!important;
+/* 2. सोशल आयकॉन एका रांगेत, गॅप देऊन, कलर शिवाय */
+footer .social-icons,
+footer .social-links {
+    display: flex!important;
+    gap: 15px!important; /* आयकॉनमध्ये अंतर */
+    justify-content: flex-start!important;
 }
 
-/* 3. Social Icons चे ब्रँड कलर फिक्स कर */
-footer.social-icons a {
+footer .social-icons a,
+footer .social-links a {
+    background: transparent!important; /* बॅकग्राउंड कलर नाही */
+    background-image: none!important;
+    border: 1px solid #ffffff33!important; /* हलकी पांढरी बॉर्डर */
+    color: #ffffff!important; /* आयकॉन पांढरा */
     width: 40px!important;
     height: 40px!important;
     border-radius: 50%!important;
     display: inline-flex!important;
     align-items: center!important;
     justify-content: center!important;
+    font-size: 18px!important;
+    margin: 0!important; /* एकत्र येणार नाही */
 }
 
-/* LinkedIn निळा */
-footer a[href*="linkedin.com"] {
-    background: #0077b5!important;
-    color: #fff!important;
-}
-
-/* Facebook निळा */
-footer a[href*="facebook.com"] {
-    background: #1877f2!important;
-    color: #fff!important;
-}
-
-/* X / Twitter काळा */
-footer a[href*="x.com"],
-footer a[href*="twitter.com"] {
-    background: #000000!important;
-    color: #fff!important;
+/* 3. Hover वर फक्त हलका इफेक्ट */
+footer .social-icons a:hover {
+    background: #ffffff1a!important; /* हलका पांढरा शेड */
+    border-color: #fff!important;
 }
 </style>
 </body>
