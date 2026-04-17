@@ -63,11 +63,44 @@ header {
   top: 0;
   z-index: 1000;
 }
-nav ul {
+/* Menu Button - सुरुवातीला लपलेलं */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Desktop Menu */
+.nav-links {
   display: flex;
   list-style: none;
   gap: 30px;
   align-items: center;
+}
+
+/* Mobile Menu - 768px पेक्षा लहान स्क्रीनसाठी */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* मोबाईलवर ☰ दाखव */
+  }
+
+  .nav-links {
+    display: none; /* मोबाईलवर मेनू लपव */
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #0d0d2b;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-links.mobile-menu {
+    display: flex; /* ☰ दाबल्यावर मेनू उघड */
+  }
 }
 
 nav a {
