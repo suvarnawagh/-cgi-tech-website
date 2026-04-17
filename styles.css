@@ -950,3 +950,152 @@ footer {
   display: block;
   border-radius: 12px;
 }
+/* CLIENT STORIES SECTION */
+.client-stories {
+    background: linear-gradient(180deg, #0d0d2b 0%, #1a1a4e 100%);
+    color: #fff;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #ffc107;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    font-size: 16px;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-box h3 {
+    font-size: 40px;
+    color: #ffc107;
+    margin: 0 0 5px 0;
+}
+
+.stat-box p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quote-icon {
+    font-size: 80px;
+    color: rgba(255, 193, 7, 0.2);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    line-height: 1;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-avatar {
+    width: 50px;
+    height: 50px;
+    background: #ffc107;
+    color: #0d0d2b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.client-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.client-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stat-box h3 {
+        font-size: 32px;
+    }
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+    .review-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
