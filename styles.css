@@ -2782,3 +2782,7 @@ footer {
 #faq .faq-item.active .faq-icon {
     transform: rotate(45deg);
 }
+.footer-social a[aria-label="Instagram"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    border: none !important;
+}
