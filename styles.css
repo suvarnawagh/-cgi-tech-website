@@ -1386,7 +1386,6 @@ footer {
 }
 
 .footer-social a:hover {
-  background: #f59e0b;
   border-color: #f59e0b;
   color: #1a0b3d;
   transform: translateY(-3px);
