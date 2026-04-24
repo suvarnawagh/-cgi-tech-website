@@ -660,16 +660,18 @@
 
 <script>
   // स्टेप 1 मधून कॉपी केलेला तुझा config इथे पेस्ट कर 👇
-const firebaseConfig = {
-  apiKey: "AIzaSyBp4YKG35BDeCZUrldvqbGb6i6rfLu8fT4",
-  authDomain: "cgi-tech-solution.firebaseapp.com",
-  projectId: "cgi-tech-solution",
-  storageBucket: "cgi-tech-solution.firebasestorage.app",
-  messagingSenderId: "758103773446",
-  appId: "1:758103773446:web:d849df6d6df883a6908e87"
-};
+  // तुझा Firebase Config इथे
+  const firebaseConfig = {
+    apiKey: "AIzaSyBp4YKG35BDeCZUrldvqbGb6i6rfLu8fT4",
+    authDomain: "cgi-tech-solution.firebaseapp.com",
+    databaseURL: "https://cgi-tech-solution-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "cgi-tech-solution",
+    storageBucket: "cgi-tech-solution.firebasestorage.app",
+    messagingSenderId: "758103773446",
+    appId: "1:758103773446:web:d849df6d6df883a6908e87"
+  };
 
-  // Firebase initialize कर
+  // Firebase Initialize कर
   firebase.initializeApp(firebaseConfig);
   const database = firebase.database();
   const reviewsRef = database.ref('reviews');
