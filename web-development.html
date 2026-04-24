@@ -7,22 +7,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-/* BULLET HATAV + ALIGNMENT FIX */
+  <style>
+/* PRICING CARDS PERFECT ALIGNMENT */
+.service-cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    align-items: stretch !important; /* He line mahatvachi - saglya boxes same height */
+}
+
+.service-card-pro {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important; /* Box chi height fix */
+}
+
+.service-card-pro .card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    text-align: center !important;
+}
+
+/* BULLET LIST CENTER ALIGNMENT */
 .service-features {
     list-style: none !important;
     padding-left: 0 !important;
-    margin: 20px 0 !important;
+    margin: 20px auto !important;
     text-align: center !important;
+    flex-grow: 1 !important; /* Content stretch hoil - boxes same height disnar */
 }
 
 .service-features li {
     padding: 8px 0 !important;
     color: #d1c5e8 !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
+    display: inline-block !important; /* Center sathi inline-block */
+    text-align: left !important;
+    width: auto !important;
     line-height: 1.6 !important;
+    list-style: none !important;
+}
+
+.service-features li::marker {
+    display: none !important;
+    content: '' !important;
+}
+
+/* Button nehmi bottom la rahnar */
+.btn-learn-more {
+    margin-top: auto !important;
 }
 </style>
 
