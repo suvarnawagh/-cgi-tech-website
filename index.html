@@ -158,50 +158,50 @@ body {
     100% { background-position: 0% 50%; }
 }
     </style>
-    <style>
-/* PARTICLES PURN SITE SATHI */
-#particles-js {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100vh !important;
-    z-index: 0 !important;
-    pointer-events: none; /* Buttons click vhayla pahije */
-    background: #0a0a1a !important;
-}
-        </style>
-    <style>
-/* 1. HERO CHA HEADING WHITE + GLOW EFFECT */
-.hero h1, 
-section h1,
-h1 {
-    color: #FFFFFF !important; /* Pure White */
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5) !important; /* Golden Glow */
-    position: relative !important;
-    z-index: 20 !important; /* Particles chya var */
-    opacity: 1 !important;
+<style>
+/* ===== LOGO SIZE FIX - HACH TAK ===== */
+.software-logos {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 50px 30px !important;
+    align-items: center !important;
 }
 
-/* 2. HERO CHA BAKI TEXT PAN WHITE */
-.hero h2, .hero p, .hero span {
-    color: #FFFFFF !important;
-    position: relative !important;
-    z-index: 20 !important;
+.logo-item {
+    text-align: center !important;
+    height: auto !important;
 }
 
-/* 3. BUTTONS GOLDEN BORDER MADHE */
-.hero .btn, .hero button, .get-started, .our-work {
-    border: 2px solid #FFD700 !important;
-    color: #FFD700 !important;
-    background: transparent !important;
-    position: relative !important;
-    z-index: 20 !important;
+.logo-item img {
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    object-fit: contain !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.9 !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
 }
 
-.hero .btn:hover {
-    background: #FFD700 !important;
-    color: #2D1B69 !important;
+.logo-item p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .software-logos { 
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px 20px !important;
+    }
+    .logo-item img {
+        width: 40px !important;
+        height: 40px !important;
+        max-width: 40px !important;
+        max-height: 40px !important;
+    }
 }
 </style>
 <style>
