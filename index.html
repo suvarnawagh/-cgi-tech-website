@@ -159,8 +159,40 @@ body {
 }
     </style>
     <style>
+/* FIX 1: Particles sathi base */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: #0a0a1a;
+}
+
+/* FIX 2: Tuzha hero section transparent kar */
+.hero, .hero-section, #hero {
+    background: transparent !important;
+    background-color: transparent !important;
+    position: relative;
+    z-index: 2;
+}
+
+/* FIX 3: Header pan var anaycha */
+header, nav {
+    position: relative;
+    z-index: 3;
+}
+
+/* FIX 4: Baki sagle section pan var */
+section, footer {
+    position: relative;
+    z-index: 2;
+}
+</style>
 </head>
 <body>
+<div id="particles-js"></div>
 <!-- Top Marquee Start -->
 <div class="top-bar">
    <div class="marquee-wrapper">
@@ -1852,6 +1884,25 @@ if(statsSection) {
     once: true,
     offset: 100
   });
+</script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS('particles-js', {
+  "particles": {
+    "number": { "value": 100 },
+    "color": { "value": ["#FFD700", "#FFC107"] },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.8, "random": true },
+    "size": { "value": 4, "random": true },
+    "line_linked": { "enable": true, "distance": 150, "color": "#FFD700", "opacity": 0.4, "width": 1 },
+    "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "out_mode": "out", "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 } }
+  },
+  "interactivity": {
+    "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+    "modes": { "repulse": { "distance": 100 }, "push": { "particles_nb": 3 } }
+  },
+  "retina_detect": true
+});
 </script>
 </body>
 </html>
