@@ -486,6 +486,47 @@ section {
     to { opacity: 1; transform: translateY(0); }
 }
 </style>
+    <style>
+/* ===== MARQUEE - BLACK TEXT ON GOLDEN ===== */
+.top-marquee, 
+div[style*="background: rgb(255"] marquee,
+div[style*="background:#FF"] marquee,
+marquee {
+    background: #FFB800 !important; /* GOLDEN/YELLOW BACKGROUND */
+    color: #000000 !important; /* BLACK TEXT */
+    font-weight: 800 !important; /* BOLD */
+    font-size: 15px !important;
+    padding: 12px 0 !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-shadow: none !important;
+}
+
+/* MARQUEE CHYA AAT SAGLE ELEMENT BLACK */
+marquee *,
+.top-marquee marquee span,
+.top-marquee marquee a,
+.top-marquee marquee p {
+    color: #000000 !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    font-weight: 800 !important;
+}
+
+/* HEADER KHALI THEV */
+header, nav {
+    position: relative !important;
+    z-index: 9998 !important;
+}
+
+/* PARTICLES MAGE DHAKAL */
+#particles-js {
+    z-index: 0 !important;
+}
+</style>
 </head>
 <body>
     <!-- Top Marquee Start -->
