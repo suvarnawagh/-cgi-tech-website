@@ -204,98 +204,6 @@ h1 {
     color: #2D1B69 !important;
 }
 </style>
-    <style>
-<style>
-/* ===== PARTICLES BACKGROUND - WEBSITE CHA MAIN COLOR ===== */
-#particles-js {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1 !important;
-    background: linear-gradient(135deg, #2D1B69 0%, #1a0033 100%) !important;
-}
-
-/* ===== HYA SECTION CHA YELLOW/ORANGE BAND KAR ===== */
-.tech-stack-section,
-section.tech-stack,
-.tech-stack,
-[class*="bg-warning"],
-[class*="bg-orange"],
-[class*="bg-yellow"],
-section[style*="background"] {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-}
-
-/* ===== SECTION CHA CONTENT ===== */
-.tech-stack-section {
-    position: relative !important;
-    z-index: 10 !important;
-    padding: 80px 20px !important;
-    text-align: center !important;
-}
-
-.tech-stack-content h3 {
-    color: #FFD700 !important;
-    font-size: 18px !important;
-    margin-bottom: 10px !important;
-}
-
-.tech-stack-content h1 {
-    color: #FFFFFF !important;
-    font-size: 42px !important;
-    font-weight: 700 !important;
-    margin-bottom: 15px !important;
-}
-
-.tech-stack-content p {
-    color: #FFFFFF !important;
-    font-size: 18px !important;
-    opacity: 0.9 !important;
-    margin-bottom: 50px !important;
-}
-
-/* ===== LOGO GRID - SAGLE 6 LOGO DISNAR ===== */
-.software-logos {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* 3 logo ek row madhe */
-    gap: 50px !important;
-    max-width: 700px !important;
-    margin: 0 auto !important;
-}
-
-.logo-item {
-    text-align: center !important;
-}
-
-/* LOGO SIZE 60PX - MOTHE HONAR NAHI */
-.logo-item img {
-    width: 60px !important;
-    height: 60px !important;
-    object-fit: contain !important;
-    filter: brightness(0) invert(1) !important; /* Sagle logo WHITE honar */
-    display: block !important;
-    margin: 0 auto 12px auto !important;
-}
-
-.logo-item p {
-    color: #FFFFFF !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    margin: 0 !important;
-}
-
-/* MOBILE SATHI 2 LOGO */
-@media (max-width: 768px) {
-    .software-logos {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 40px !important;
-    }
-}
-</style>
 </head>
 <body>
     <!-- Top Marquee Start -->
@@ -704,7 +612,7 @@ section[style*="background"] {
 <section class="tech-stack-section">
   <div class="container">
     <div class="tech-stack-content">
-        <h3>Our Tech Stack</h3>
+        <span class="tag">Our Tech Stack</span>
         <h1>Industry-Leading Software</h1>
         <p>We use Hollywood-grade tools to deliver photorealistic results for your CGI & VFX projects.</p>
         
@@ -720,8 +628,7 @@ section[style*="background"] {
             </div>
             
             <div class="logo-item">
-              <!-- HOUDINI FIX -->
-        <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/sidefx.svg" alt="Houdini">
+                <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/sidefx.svg" alt="Houdini">
                 <p>Houdini</p>
             </div>
             
@@ -736,7 +643,7 @@ section[style*="background"] {
             </div>
             
             <div class="logo-item">
-               <img src="https://cdn.worldvectorlogo.com/logos/nuke-1.svg" alt="Nuke">
+                <img src="https://cdn.worldvectorlogo.com/logos/nuke-1.svg" alt="Nuke">
                 <p>Nuke</p>
             </div>
         </div>
