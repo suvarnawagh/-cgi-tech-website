@@ -486,26 +486,36 @@ section {
     to { opacity: 1; transform: translateY(0); }
 }
 </style>
-    <style>
-/* ===== MARQUEE - BLACK TEXT ON GOLDEN ===== */
+<style>
+/* ===== 1. MARQUEE CONTAINER LA GOLDEN BG ===== */
 .top-marquee, 
-div[style*="background: rgb(255"] marquee,
-div[style*="background:#FF"] marquee,
-marquee {
-    background: #FFB800 !important; /* GOLDEN/YELLOW BACKGROUND */
-    color: #000000 !important; /* BLACK TEXT */
-    font-weight: 800 !important; /* BOLD */
-    font-size: 15px !important;
+div[style*="background: rgb(255"],
+div[style*="background:#FF"],
+.bg-warning {
+    background: #FFB800 !important; /* GOLDEN BACKGROUND */
     padding: 12px 0 !important;
-    position: relative !important;
-    z-index: 99999 !important;
+    position: fixed !important; /* FIXED VAR */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 999999 !important;
     display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    text-shadow: none !important;
 }
 
-/* MARQUEE CHYA AAT SAGLE ELEMENT BLACK */
+/* ===== 2. MARQUEE TEXT BLACK ===== */
+.top-marquee marquee,
+.bg-warning marquee,
+marquee {
+    color: #000000 !important; /* BLACK TEXT */
+    font-weight: 800 !important;
+    font-size: 15px !important;
+    background: transparent !important; /* MARQUEE TRANSPARENT */
+    display: block !important;
+    text-shadow: none !important;
+    width: 100% !important;
+}
+
+/* ===== 3. MARQUEE AAT SAGLA BLACK ===== */
 marquee *,
 .top-marquee marquee span,
 .top-marquee marquee a,
@@ -513,18 +523,28 @@ marquee *,
     color: #000000 !important;
     background: transparent !important;
     text-shadow: none !important;
-    font-weight: 800 !important;
 }
 
-/* HEADER KHALI THEV */
-header, nav {
+/* ===== 4. HEADER MARQUEE KHALI DHAKAL ===== */
+header, nav, .navbar {
     position: relative !important;
+    margin-top: 48px !important; /* MARQUEE CHI HEIGHT */
     z-index: 9998 !important;
+    background: #1A0B2E !important;
 }
 
-/* PARTICLES MAGE DHAKAL */
+/* ===== 5. PARTICLES SAGLYAT MAGE ===== */
 #particles-js {
+    position: fixed !important;
+    top: 0 !important;
     z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* ===== 6. BAKI CONTENT ===== */
+section, body {
+    position: relative !important;
+    z-index: 10 !important;
 }
 </style>
 </head>
@@ -1696,6 +1716,17 @@ function filterPortfolio(category) {
         <p>&copy; 2026 CGI Tech Solutions. All Rights Reserved.</p>
     </div>
 </footer>
+    <!-- EXIT POPUP START - FOOTER BAHER TAK -->
+    <div id="exitPopup" style="display:none;">
+      <div class="popup-box">
+        <button onclick="closePopup()" class="popup-close">×</button>
+        <h3>Wait! 👋</h3>
+        <p>Want a Free Website Demo for Your Business?</p>
+        <p class="offer">Website in 7 Days + 1 Year Free Support + Starting at ₹9,999</p>
+        <button class="popup-btn" onclick="closePopup()">Yes, I Want a Demo →</button>
+        <a href="https://wa.me/917796340778?text=Hi,%20mala%20Free%20Website%20Demo%20pahije" target="_blank" class="whatsapp-btn">Ho, Demo Pahije →</a>
+      </div>
+    </div>
 <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 <div class="social-float"><a href="https://wa.me/917796340778?text=Hi%20CGI%20Tech%20Solutions%2C%20I%20saw%20your%20website.%20I%20want%20a%20website%20for%20my%20business." target="_blank" class="whatsapp-float" onclick="gtag('event', 'whatsapp_click', {'method': 'Floating WhatsApp'});">
         <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
@@ -2124,48 +2155,6 @@ if(window.innerWidth < 768){
 }
 </script>
 <!-- STICKY CTA BAR END -->
-        <!-- EXIT POPUP START -->
-<div id="exitPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10000;align-items:center;justify-content:center;">
-  <div style="background:#1a0b3d;border:2px solid #ffc107;border-radius:16px;padding:30px;max-width:400px;margin:20px;text-align:center;position:relative;">
-    <button onclick="closePopup()" style="position:absolute;top:10px;right:15px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;">×</button>
-    <h3>Wait! 👋</h3>
-    <p>Want a Free Website Demo for Your Business?</p>
-    <p class="offer">Website in 7 Days + 1 Year Free Support + Starting at ₹9,999</p>
-    <button class="popup-btn">Yes, I Want a Demo →</button>
-    <a href="https://wa.me/917796340778?text=Hi,%20mala%20Free%20Website%20Demo%20pahije" target="_blank" style="display:inline-block;background:#25D366;color:#fff;padding:15px 30px;border-radius:30px;text-decoration:none;font-weight:700;font-size:16px;">Ho, Demo Pahije →</a>
-  </div>
-</div>
-
-<script>
-// POPUP FAST TRIGGER - 3 SEC NANTR + 30% SCROLL
-let popupShown = false;
-
-// 1. 3 Second nantar popup
-setTimeout(function() {
-    if (!popupShown) {
-        document.getElementById('exitPopup').style.display = 'flex';
-        popupShown = true;
-    }
-}, 3000); // 3000 = 3 second
-
-// 2. 30% Scroll kelyavar popup
-window.addEventListener('scroll', function() {
-    if (popupShown) return;
-    
-    let scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    
-    if (scrollPercent > 30) {
-        document.getElementById('exitPopup').style.display = 'flex';
-        popupShown = true;
-    }
-});
-
-function closePopup(){
-    document.getElementById('exitPopup').style.display = 'none';
-}
-</script>
-<!-- EXIT POPUP END -->
-        <!-- STICKY CTA BAR -->
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
