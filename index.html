@@ -397,6 +397,86 @@ header h1 {
     color: #FFFFFF !important;
 }
 </style>
+<style>
+/* ===== 1. ANIMATED MESH GRADIENT - SAP SARKHI ===== */
+body {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #2D1B69) !important;
+    background-size: 400% 400% !important;
+    animation: meshGradient 20s ease infinite !important;
+    min-height: 100vh !important;
+}
+
+@keyframes meshGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== 2. FLOATING PARTICLES - CANVAS ADD KARAVA LAGEL ===== */
+#particles-js {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+/* ===== 3. HERO TEXT WHITE + GLOW + FADE IN ===== */
+.hero h1 {
+    color: #FFFFFF !important;
+    font-size: 56px !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 30px rgba(192, 132, 252, 0.6) !important;
+    animation: fadeInUp 1s ease-out !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.hero p, .hero span {
+    color: rgba(255, 255, 255, 0.9) !important;
+    animation: fadeInUp 1s ease-out 0.3s both !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 4. BUTTONS HOVER ANIMATION ===== */
+.hero .btn, .get-started {
+    border: 2px solid #C084FC !important;
+    color: #C084FC !important;
+    background: rgba(192, 132, 252, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 14px 32px !important;
+    border-radius: 50px !important;
+    transition: all 0.4s ease !important;
+    animation: fadeInUp 1s ease-out 0.6s both !important;
+}
+
+.hero .btn:hover {
+    background: #C084FC !important;
+    color: #1A0B2E !important;
+    box-shadow: 0 0 30px rgba(192, 132, 252, 0.8) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ===== 5. SAGLE SECTION TRANSPARENT ===== */
+section, .tech-stack-section, [class*="bg-"] {
+    background: transparent !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
 </style>
 </head>
 <body>
@@ -449,7 +529,7 @@ header h1 {
         </ul>
     </nav>
 </header>
-
+<div id="particles-js"></div>
     <main>
         <section class="hero" id="home">
             <div class="hero-content">
@@ -2093,6 +2173,40 @@ if(statsSection) {
     once: true,
     offset: 100
   });
+</script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": "#C084FC" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5, "random": true },
+    "size": { "value": 3, "random": true },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#C084FC",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out"
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": { "enable": true, "mode": "grab" },
+      "onclick": { "enable": true, "mode": "push" }
+    }
+  }
+});
 </script>
 </body>
 </html>
