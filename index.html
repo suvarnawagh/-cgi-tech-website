@@ -171,41 +171,51 @@ body {
     background: #0a0a1a !important;
 }
 
-/* SAGLE SECTIONS TRANSPARENT + VAR */
-body {
-    background: #0a0a1a !important;
+<style>
+/* 1. PARTICLES PURPLE BACKGROUND */
+#particles-js {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background: linear-gradient(135deg, #2D1B69 0%, #1a0033 50%, #4A148C 100%) !important; /* PURPLE GRADIENT */
 }
 
-header, nav, main, section, footer, 
-.hero, .stats, .services, .portfolio, .contact, .container {
+/* 2. BODY LA PAN PURPLE */
+html, body {
+    background: #2D1B69 !important; /* Dark Purple */
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. SAGLE SECTION TRANSPARENT */
+header, nav, section, footer, .hero, .container, .row, div[class*="bg"] {
     position: relative !important;
     z-index: 2 !important;
     background: transparent !important;
     background-color: transparent !important;
+    background-image: none !important;
 }
 
-/* BOOTSTRAP CHE BG CLASSES BAND KAR */
-.bg-dark, .bg-primary, .bg-light, [class*="bg-"] {
-    background: transparent !important;
-    background-color: transparent !important;
+/* 4. HEADER GLASS EFFECT - PURPLE */
+header {
+    background: rgba(45, 27, 105, 0.4) !important; /* 40% transparent purple */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2); /* Golden border */
 }
 
-/* CONTENT READABLE RAHNYASATHI THODA DARK OVERLAY */
-.hero::before, section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 26, 0.3); /* 30% dark overlay */
-    z-index: -1;
+/* 5. TEXT VAR AANAYCHA */
+.hero-content, .container {
+    position: relative !important;
+    z-index: 3 !important;
 }
 </style>
 </head>
 <body>
 <div id="particles-js"></div>
-<!-- Tuzha header, main, sagla code yachya khali -->
 <header>
 <!-- Top Marquee Start -->
 <div class="top-bar">
