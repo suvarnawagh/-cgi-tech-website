@@ -145,10 +145,11 @@
         @keyframes fadeInUp {
             to { opacity: 1; transform: translateY(0); }
         }
-        <style>
-/* ===== FINAL CLEAN - AADHI SARKHI SITE + MARQUEE ===== */
+      <style>
+/* ===== SCROLL + LAYOUT FINAL FIX ===== */
 html, body {
     height: auto !important;
+    min-height: 100vh !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     background: #1A0B2E !important;
@@ -156,6 +157,7 @@ html, body {
     padding: 0 !important;
 }
 
+/* Marquee Fixed */
 .top-bar {
     background: #FFB800 !important;
     padding: 6px 0 !important;
@@ -174,18 +176,20 @@ html, body {
 }
 
 body {
-    padding-top: 36px !important;
+    padding-top: 36px !important; /* Marquee sathi jaga */
 }
 
-#particles-js {
+/* Particles/Animation band - toch scroll marat hota */
+#particles-js, .bg-animation, [class*="particle"] {
     display: none !important;
 }
 
-header, section, main, footer, div, .hero, .container {
+/* Saglya section la scroll allow kar */
+header, nav, section, main, footer, .hero, .container, div {
     height: auto !important;
+    max-height: none !important;
     overflow: visible !important;
     position: relative !important;
-    z-index: 10 !important;
 }
 </style>
 </head>
