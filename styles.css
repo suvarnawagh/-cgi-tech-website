@@ -3361,3 +3361,31 @@ footer {
     transform: translateY(-8px);
     box-shadow: 0 10px 40px rgba(106, 27, 154, 0.15);
 }
+/* ===== PURN SITE LA SAME DARK PURPLE BG ===== */
+.about-detailed,
+.media-coverage,
+.stats,
+.certifications,
+section {
+    background: #1e1b4b !important;
+}
+
+/* Jar gradient effect pahije asel tar */
+.about-detailed {
+    background: linear-gradient(180deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%) !important;
+}
+
+.media-coverage {
+    background: #1e1b4b !important;
+    border-top: none !important;
+}
+
+.stats {
+    background: #1e1b4b !important;
+    margin-top: 80px !important;
+    padding-top: 50px !important;
+}
+
+.certifications {
+    background: #1e1b4b !important;
+}
